@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+		</div>
+	</div>
+	
+	</header>
+	<div class="results">
+	</div>
+<div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+<div id="chartContainer2" style="height: px; width: 100%;"></div>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<script type="text/javascript">
+var hi='{{chart}}'	
+window.onload = function () {
+
+var keys = {{ weekofyear }};
+var values = {{ ypred }};
+var arr = [];
+
+keys.map((i,j) => {
+	arr = [...arr,{"label": keys[i], "y": values[j]}]
+})
+
+var chart1 = new CanvasJS.Chart("chartContainer1", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: true, // change to true		
+	title:{
+		text: "Prediction Graph Of Selected Year"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type:hi ,	
+		dataPoints: arr
+	}
+	]
+});
+
+chart1.render();
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

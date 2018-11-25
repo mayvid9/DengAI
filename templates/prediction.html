@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+       <link href='http://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic|News+Cycle:400,700' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/earlyaccess/notokufiarabic.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/earlyaccess/notosansscsliced.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/vendor/magnific-popup.css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/vendor/calendar.css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/vendor/calendar-style.css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/styles.css">
+        <link rel="shortcut icon" href="https://my.clevelandclinic.org/assets/imgs/favicon.ico" type="image/x-icon" />
+
+                <title>Prediction</title>
+
+    <link rel="apple-touch-icon" href="assets/imgs/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/imgs/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/imgs/touch-icon-ipad-retina.png">
+    <link rel='icon' href="assets/imgs/touch-icon-iphone.png" sizes="256x256" type="image/png" />
+    <link rel="alternate" href="health.html" hreflang="en" />
+    <link rel="alternate" href="health.html" hreflang="x-default" />
+    <style>
+    select{
+        width:200px;
+    }
+    #demo{
+      font-size: 50px;
+    }
+    .myStyle1{
+      color: red;
+      font-size: 50px;
+      margin-top: 50px;
+    }
+    .myStyle2{
+      color: orange;
+      font-size: 50px;
+      margin-top: 50px;
+    }
+    .myStyle3{
+      color: yellow;
+      font-size: 50px;
+      margin-top: 50px;
+    }
+    .myStyle4{
+      color: green;
+      font-size: 50px;
+      margin-top: 50px;
+    }
+    </style>
+
+    </head>
+    <body class="home">
+
+
+
+
+        <script src="../code.jquery.com/jquery-3.0.0.js"></script>
+        <script src="../code.jquery.com/jquery-migrate-3.0.1.js"></script>
+        <script type="text/javascript" src=predictpage.js></script>
+
+
+
+
+
+
+    <section class="hero-content  theme-light-gray-pattern">
+        <div class="container hero-pad">
+
+
+
+
+            <div class="l-66-33--1">
+                    <h1 class="hero-content__title lede">
+
+                        Prediction
+                    </h1>
+                                    <div class="hero-content__subtitle">Predict the number of cases according to the  week of a particular year.</div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+<div class="page-content">
+
+
+
+
+
+
+
+<section class="call-to-action call-to-action-small call-to-action-small--borders theme-white">
+
+
+
+    <div id="B9374B1E-C110-4E45-A865-86B5721EE0AE" class="container content-pad accordion-content js-accordion-content">
+        <h2 class="section__heading lede section__heading--centered" >
+                    </h2>
+                    <p id="demo">{{prediction}}</p><div id="danger"></div>
+        <script>
+
+            var x = {{prediction}};
+            // var x = 25;
+            var dangerElement = document.getElementById("danger");
+            if (x<=40 && x>=30)
+              {
+                dangerElement.classList.add("myStyle1");
+                dangerElement.innerHTML = "Danger: You need to manage your Resources.";
+
+              }
+            else if (x<30 && x>=20){
+              dangerElement.classList.add("myStyle2");
+              dangerElement.innerHTML = "High: Number of cases are going to be very high!";
+
+            }
+            else if(x>10 && x<20)
+            {
+              dangerElement.classList.add("myStyle3");
+              dangerElement.innerHTML = "Moderate: Dengue cases will be more than usual.";
+            }
+            else {
+              dangerElement.classList.add("myStyle4");
+              dangerElement.innerHTML = "Normal: Cases will not be any different than usual.";
+            }
+
+
+
+        </script>
+
+
+
+            <div class="panel-row">
+
+
+            </div>
+</section>
+</div>
+
+
+
+        <section class="contact-box-ribbon theme-blue-gray-pattern">
+    <div class="container content-pad">
+
+        <ul class="contact-box" id="appointment-expander">
+
+
+
+                    <li><a href="help.html" class="button--secondary button--full button--arrow hero-call-to-action__sticky-hidden">Contact Us</a></li>
+        </ul>
+
+
+
+    </div>
+</section>
+
+
+    </body>
+
+
+
+
+</html>

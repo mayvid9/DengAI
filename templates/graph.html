@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+       <link href='http://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic|News+Cycle:400,700' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/earlyaccess/notokufiarabic.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/earlyaccess/notosansscsliced.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/vendor/magnific-popup.css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/vendor/calendar.css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/vendor/calendar-style.css">
+        <link rel="stylesheet" href="https://my.clevelandclinic.org/assets/styles/styles.css">
+        <link rel="shortcut icon" href="https://my.clevelandclinic.org/assets/imgs/favicon.ico" type="image/x-icon" />
+
+                <title>Prediction</title>
+
+    <link rel="apple-touch-icon" href="assets/imgs/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/imgs/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/imgs/touch-icon-ipad-retina.png">
+    <link rel='icon' href="assets/imgs/touch-icon-iphone.png" sizes="256x256" type="image/png" />
+    <link rel="alternate" href="health.html" hreflang="en" />
+    <link rel="alternate" href="health.html" hreflang="x-default" />
+    <style>
+    select{
+        width:200px;
+    }
+    #demo{
+      font-size: 50px;
+    }
+    </style>
+
+    </head>
+    <body class="home">
+
+
+
+
+        <script src="../code.jquery.com/jquery-3.0.0.js"></script>
+        <script src="../code.jquery.com/jquery-migrate-3.0.1.js"></script>
+        <script type="text/javascript" src=predictpage.js></script>
+
+
+
+
+
+
+    <section class="hero-content  theme-light-gray-pattern">
+        <div class="container hero-pad">
+
+
+
+
+            <div class="l-66-33--1">
+                    <h1 class="hero-content__title lede">
+
+                        Prediction Graph
+                    </h1>
+                                    <div class="hero-content__subtitle">Predict the graph of selected year.</div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+<div class="page-content">
+
+
+
+
+
+
+
+<section class="call-to-action call-to-action-small call-to-action-small--borders theme-white">
+
+
+
+    <div id="chartContainer" class="container content-pad accordion-content js-accordion-content">
+        <h2 class="section__heading lede section__heading--centered" >
+                    </h2>
+                   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+                   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                   <div id="print"></div>
+<script type="text/javascript">
+//var hi={{chart}};
+
+var arr = [];
+k={{weekofyear}};
+v={{ypred}};
+//document.getElementById("print").innerHTML = "12";
+/*keys.map((i,j) => {
+    arr = [...arr,{"label": k[i], "y": v[j]}]
+})
+*/
+window.onload = function () {
+/*var chart1 = new CanvasJS.Chart("print", {
+    theme: "dark1", // "light2", "dark1", "dark2"
+    animationEnabled: true, // change to true       
+    title:{
+        text: "Prediction Graph Of Selected Year"
+    },
+    data: [
+    {
+        // Change type to "bar", "area", "spline", "pie",etc.
+        type:"column" ,   
+        dataPoints: f
+    }
+    ]
+});
+
+chart1.render();*/
+
+var typeReq = '{{chart}}';
+var data = [];
+if(typeReq === 'line'){
+    data = [{
+        x: k,
+        y: v,
+        type: 'line'
+    }];
+}
+else if(typeReq === 'bar'){
+    data = [{
+        x: k,
+        y: v,
+        orientation: 'v',
+        type: 'bar'
+    }];
+}
+else if(typeReq === 'area'){
+    data = [{2
+        x: k,
+        y: v,
+        fill: 'tozeroy',
+        type: 'scatter'
+    }];
+}
+
+Plotly.newPlot('print', data);
+/*TESTER = document.getElementById('print');
+    Plotly.plot( TESTER, [{
+    x: k,
+    y: v }], {
+    margin: { t: 0 } } );
+console.log(f);*/
+}
+// var keys = {{ weekofyear }};
+// var values = {{ ypred }};
+
+// console.log(11);
+
+</script>
+
+
+
+
+            <div class="panel-row">
+
+
+            </div>
+</section>
+</div>
+
+
+
+       
+    </body>
+
+
+
+
+</html>

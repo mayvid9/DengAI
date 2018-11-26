@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+       <link href='http://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic|News+Cycle:400,700' rel='stylesheet' type='text/css'>
+        <link href="../fonts.googleapis.com/earlyaccess/notokufiarabic.css" rel="stylesheet" type="text/css">
+        <link href="../fonts.googleapis.com/earlyaccess/notosansscsliced.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/styles/vendor/magnific-popup.css">
+        <link rel="stylesheet" href="assets/styles/vendor/calendar.css">
+        <link rel="stylesheet" href="assets/styles/vendor/calendar-style.css">
+        <link rel="stylesheet" href="assets/styles/styles.css">
+        <link rel="shortcut icon" href="assets/imgs/favicon.ico" type="image/x-icon" />
+
+                <title>Graph Page</title>
+
+    <link rel="apple-touch-icon" href="assets/imgs/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/imgs/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="assets/imgs/touch-icon-ipad-retina.png">
+    <link rel='icon' href="assets/imgs/touch-icon-iphone.png" sizes="256x256" type="image/png" />
+    <link rel="alternate" href="health.html" hreflang="en" />
+    <link rel="alternate" href="health.html" hreflang="x-default" />
+    <style>
+    select{
+        width:200px;
+    }
+    </style>
+
+    </head>
+    <body class="home">
+
+
+
+
+        <script src="../code.jquery.com/jquery-3.0.0.js"></script>
+        <script src="../code.jquery.com/jquery-migrate-3.0.1.js"></script>
+        <script type="text/javascript" src=predictpage.js></script>
+
+
+        <header class="header">
+
+
+
+
+
+    <nav class="nav--utility">
+        <ul>
+            <li>
+
+                <a class="nav--utility__link nav--utility__link--phone" href="tel:800.223.2273">
+                    800.223.2273
+                </a>
+            </li>
+
+
+                <li>
+                    <a class="nav--utility__link " title="Need help?" href="help.html" DisableWebEdit="True">Need help?</a>
+                </li>
+
+
+
+        </ul>
+    </nav>
+
+
+    <span class="header__logo">
+<a href="index.html" DisableWebEdit="True"><img src="-/scassets/images/org/logo/logo-ccf2958.svg?la=en&amp;hash=1AC03A77F0EFD3CE883B2F5FEBFDED5E33EBF191" alt="logo-ccf" DisableWebEdit="True" /></a>
+
+    </span>
+
+
+
+            <div class="nav--primary__menu clearfix">
+                <a class="button--small nav--primary__menu_toggle js-nav--primary__menu_toggle button--strong" href="#">
+                    Menu <i class="icon-arrow-white-down" role="img" aria-label="Menu Arrow Down"></i>
+                </a>
+                <a href="search.html" aria-label="Search" aria-controls="search-box" class="button--small nav--primary__search_toggle button button--search" aria-expanded="false">Search</a>
+
+                <div class="underlay js-underlay"></div>
+                <div class="nav--primary__wrapper js-nav--primary__wrapper">
+                    <div class="nav--primary__wrapper-inner">
+                        <div class="triangle-up"></div>
+                        <h2 class="nav--primary__header">
+                            DengAI
+                        </h2>
+
+
+
+
+
+
+    <div class="nav--primary__buttons clearfix">
+<a class="button--small " title="Need help?" href="help.html" DisableWebEdit="True">Need help?</a>    </div>
+
+                    </div>
+                    <div class="nav--primary__extra shade">
+                        Call for Additional Assistance
+                        <a href="tel:8002232273">8002232273</a>
+                    </div>
+                </div>
+            </div>
+        <nav class="nav--secondary js-nav--secondary">
+            <ul>
+
+                            <a class="nav--secondary__link " href="staff.html" DisableWebEdit="True">Find a Doctor</a>
+                        </li>
+                        <li>
+                            <a class="nav--secondary__link " href="locations.html" DisableWebEdit="True">Locations & Directions</a>
+                        </li>
+                        <li>
+                            <a class="nav--secondary__link " href="health.html" DisableWebEdit="True">Health Library</a>
+                        </li>
+                                            </ul>
+        </nav>
+
+
+
+
+
+</header>
+
+
+
+
+
+    <section class="hero-content  theme-light-gray-pattern">
+        <div class="container hero-pad">
+
+
+<nav class="breadcrumb breadcrumb__sticky-hidden">
+        <a href="index.html" class="breadcrumb__link icon-home">
+            <span class="element-invisible">Home</span>
+        </a>
+
+
+</nav>
+
+            <div class="l-66-33--1">
+                    <h1 class="hero-content__title lede">
+
+                        Graph Prediction
+                    </h1>
+                                    <div class="hero-content__subtitle">Predict the graph of selected year.</div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+<div class="page-content">
+
+
+
+
+
+
+
+<section class="call-to-action call-to-action-small call-to-action-small--borders theme-white">
+  <form action="http://192.168.43.126:5001/graph" method="POST">
+
+
+    <div id="B9374B1E-C110-4E45-A865-86B5721EE0AE" class="container content-pad accordion-content js-accordion-content">
+        <h2 class="section__heading lede section__heading--centered">
+                    </h2>
+
+
+            <div class="panel-row">
+
+                    <div class="family-panel call-to-action__item js-panel  l-4col--1">
+
+                                                    <h3 class="call-to-action__title lede ">
+                                City
+                            </h3>
+
+
+                        <div class="call-to-action__text ">
+                            <select class=cityname name=city>
+                                <option value="">Select State</option>
+                                <option value="San Juan">San Juan</option>
+                                <option value="Iquitos">Iquitos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="family-panel call-to-action__item js-panel  l-4col--2">
+
+                                                    <h3 class="call-to-action__title lede ">
+                                Year
+                            </h3>
+
+
+                        <div class="acctocity ">
+                            <select name=year>
+                                <option value="">Select Year</option>
+                                <option value="2010">2008</option>
+                                <option value="2011">2009</option>
+                                <option value="2010">2010</option>
+                                <option value="2011">2011</option>
+                                <option value="2012">2012</option>
+                                <option value="2013">2013</option>
+
+                            </select>
+                        </div>
+                 </div>
+                    <div class="family-panel call-to-action__item js-panel  l-4col--3">
+
+                                                    <h3 class="call-to-action__title lede ">
+                                Type of graph
+                            </h3>
+
+
+                        <div class="call-to-action__text ">
+                            <select name=chart>
+                                <option value="">Select</option>
+                                <option value="bar">bar</option>
+                                <option value="area">area</option>
+                                <option value="line">line</option>
+                            </select>
+                       </div>
+                    </div>
+                    <div class="family-panel call-to-action__item js-panel  l-4col--4">
+
+                            <button type="submit">Show Graph</button>
+                    </div>
+            </div>
+            <div class="panel-row">
+
+
+            </div>
+          </form>
+</section>
+</div>
+
+
+
+        <section class="contact-box-ribbon theme-blue-gray-pattern">
+    <div class="container content-pad">
+
+        <ul class="contact-box" id="appointment-expander">
+
+
+
+                    <li><a href="help.html" class="button--secondary button--full button--arrow hero-call-to-action__sticky-hidden">Contact Us</a></li>
+        </ul>
+
+
+
+    </div>
+</section>
+
+
+    </body>
+</html>
